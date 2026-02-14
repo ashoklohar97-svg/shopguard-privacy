@@ -1,134 +1,439 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>ShopGuard - Privacy Policy</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ShopGuard – Privacy Policy</title>
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; background:#f5f7fa; margin:0; padding:0;}
-    .wrap{max-width:920px; margin:0 auto; padding:24px;}
-    .card{background:#fff; border-radius:12px; padding:22px; box-shadow:0 6px 20px rgba(0,0,0,0.06);}
-    h1{margin:0 0 6px; font-size:24px;}
-    .muted{color:#6b7280; font-size:13px; margin:0 0 16px;}
-    h2{margin:18px 0 8px; font-size:16px;}
-    p,li{color:#111827; line-height:1.65; font-size:14px;}
-    hr{border:none; border-top:1px solid #e5e7eb; margin:18px 0;}
-    .tag{display:inline-block; padding:4px 10px; border:1px solid #e5e7eb; border-radius:999px; font-size:12px; color:#374151; background:#f9fafb;}
+    :root{
+      --bg:#0b1220; --card:#0f172a; --text:#e5e7eb; --muted:#9ca3af;
+      --line:#1f2937; --btn:#111827; --btnOn:#2563eb;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+    .wrap{max-width:980px;margin:0 auto;padding:18px}
+    .card{background:rgba(15,23,42,.9);border:1px solid var(--line);border-radius:14px;padding:18px}
+    h1{margin:0 0 6px;font-size:22px}
+    .meta{color:var(--muted);font-size:13px;margin-bottom:14px}
+    .tabs{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 14px}
+    .tab{
+      border:1px solid var(--line); background:var(--btn); color:var(--text);
+      padding:9px 14px; border-radius:999px; cursor:pointer; font-weight:600;
+    }
+    .tab[aria-selected="true"]{background:var(--btnOn);border-color:transparent}
+    .section{padding:12px 0;border-top:1px solid var(--line)}
+    .section:first-of-type{border-top:none}
+    h2{margin:0 0 8px;font-size:16px}
+    ul{margin:8px 0 0 18px}
+    .small{color:var(--muted);font-size:12px;margin-top:10px}
+    .badge{display:inline-block;padding:2px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:12px;margin-left:8px}
+    a{color:#93c5fd}
+    .hr{height:1px;background:var(--line);margin:14px 0}
   </style>
 </head>
 <body>
   <div class="wrap">
     <div class="card">
-      <h1>ShopGuard – Privacy Policy</h1>
-      <p class="muted">Last updated: 2026-02-13 &nbsp; <span class="tag">English + हिन्दी</span></p>
+      <h1>ShopGuard – Privacy Policy <span class="badge">English + हिन्दी</span></h1>
+      <div class="meta">
+        Last updated: <b>2026-02-14</b><br/>
+        Support Email: <b>shopguard.help@gmail.com</b>
+      </div>
 
-      <p><b>ShopGuard respects your privacy.</b> This Privacy Policy explains how we collect, use, store, and protect your information when you use the ShopGuard mobile application.</p>
+      <div class="tabs" role="tablist" aria-label="Language switch">
+        <button class="tab" id="tab-en" role="tab" aria-selected="true" aria-controls="content-en">English</button>
+        <button class="tab" id="tab-hi" role="tab" aria-selected="false" aria-controls="content-hi">हिंदी</button>
+      </div>
 
-      <h2>1. Information We Collect</h2>
-      <p>We may collect the following information:</p>
-      <ul>
-        <li><b>Account Information:</b> Email address (used for login and account management).</li>
-        <li><b>User-Entered Business Data:</b> Customer/Supplier details (name, mobile number, photo, notes), ledger entries, Rozmel diary entries, amounts, transactions, loan/interest details, cheque reminders.</li>
-        <li><b>Attachments (Optional):</b> Bills/photos/documents that you choose to attach.</li>
-        <li><b>Support / Technical Data (Basic):</b> App version and device model may be used for bug reporting and support.</li>
-      </ul>
+      <!-- ===================== ENGLISH ===================== -->
+      <div id="content-en" role="tabpanel" aria-labelledby="tab-en">
+        <div class="section">
+          <p>
+            ShopGuard respects your privacy. This Privacy Policy explains how we collect, use, store, and protect your
+            information when you use the ShopGuard mobile application.
+          </p>
+        </div>
 
-      <h2>2. How We Use Your Information</h2>
-      <p>We use your information only to provide app features such as Rozmel diary, customer/supplier ledger, loan/interest tracking, cheque reminders, attachments, backup/restore, app updates, and support. We do <b>not</b> sell or rent your personal data to anyone.</p>
+        <div class="section">
+          <h2>1) Information We Collect</h2>
+          <p>We may collect the following information:</p>
 
-      <h2>3. Permissions and Device Features We Use</h2>
-      <p>ShopGuard may use the following device features only for app functionality:</p>
-      <ul>
-        <li><b>Microphone (Optional):</b> For voice entry in Rozmel / Cheque / Notes.</li>
-        <li><b>Camera / Photos (Optional):</b> To attach bills/photos and documents.</li>
-        <li><b>Notifications:</b> To show cheque reminders and important updates.</li>
-        <li><b>Exact Alarm (Android 12+):</b> To trigger cheque reminder notifications at the correct time.</li>
-        <li><b>Contact Picker (No permission):</b> ShopGuard may allow selecting a phone number using the system contact picker. We do not request contacts permission.</li>
-      </ul>
-      <p class="muted">You can use basic app features even without optional permissions (where possible).</p>
+          <p><b>A) Account Information</b></p>
+          <ul>
+            <li>Email address (used for login and account management)</li>
+            <li>(Optional) Name (only if you choose to enter it)</li>
+          </ul>
 
-      <h2>4. Third-Party Services</h2>
-      <p>ShopGuard uses trusted third-party services such as Firebase by Google (Authentication, Firestore Database, Storage, Cloud Messaging). These services may process data as required to provide functionality.</p>
+          <p style="margin-top:10px;"><b>B) User-Entered Business Data (Main App Data)</b></p>
+          <ul>
+            <li>Customer/Supplier details (name, mobile number, notes, optional photo)</li>
+            <li>Ledger entries (credit/debit), balances, payment history</li>
+            <li>Rozmel diary entries</li>
+            <li>Loan/Interest details</li>
+            <li>Cheque tracking details and reminders</li>
+            <li>Any notes or records entered by you</li>
+          </ul>
 
-      <h2>5. Data Security</h2>
-      <p>We use reasonable security measures such as authentication and Firebase security rules to protect user data. However, no method of storage is 100% secure, and we cannot guarantee absolute security.</p>
+          <p style="margin-top:10px;"><b>C) Attachments (Optional)</b></p>
+          <ul>
+            <li>Photos, bills, or documents that you choose to upload inside the app</li>
+          </ul>
 
-      <h2>6. Data Retention</h2>
-      <p>Your data is stored as long as your account is active and you continue using the app.</p>
+          <p style="margin-top:10px;"><b>D) App Activity / Analytics Data</b></p>
+          <ul>
+            <li>Basic app usage events (for performance and improvement)</li>
+          </ul>
 
-      <h2>7. Account Deletion and Data Deletion</h2>
-      <p>Users can delete their account and associated data in two ways:</p>
-      <ul>
-        <li><b>Inside the App (Recommended):</b> Settings → Delete Account &amp; Data (permanent deletion of account and app data).</li>
-        <li><b>By Contacting Support:</b> If you cannot access the app, you may request deletion via email below.</li>
-      </ul>
+          <p style="margin-top:10px;"><b>E) Device / Technical Data</b></p>
+          <ul>
+            <li>Device model and Android version (basic diagnostics)</li>
+            <li>App version and basic diagnostic information (if applicable)</li>
+            <li>FCM token (for notifications)</li>
+            <li>Device identifiers (such as Firebase installation identifiers) used for analytics, diagnostics, and notifications</li>
+          </ul>
+        </div>
 
-      <h2>8. Children’s Privacy</h2>
-      <p>ShopGuard is not intended for children under the age of 13. We do not knowingly collect personal information from children.</p>
+        <div class="section">
+          <h2>2) How We Use Your Information</h2>
+          <p>We use your data only to provide and improve app features, such as:</p>
+          <ul>
+            <li>Rozmel diary</li>
+            <li>Customer/Supplier ledger</li>
+            <li>Loan/Interest tracking</li>
+            <li>Cheque reminders</li>
+            <li>Attachments</li>
+            <li>Backup/restore (if available)</li>
+            <li>App notifications and important updates</li>
+            <li>Technical support and bug fixing</li>
+            <li>Analytics for app performance and improvement</li>
+          </ul>
+          <p>We do not sell or rent your personal data to anyone.</p>
+        </div>
 
-      <h2>9. Changes to This Policy</h2>
-      <p>We may update this Privacy Policy from time to time. Any changes will be reflected in this document.</p>
+        <div class="section">
+          <h2>3) Does ShopGuard Share Data With Third Parties?</h2>
+          <p><b>YES (Only with service providers)</b></p>
+          <p>
+            ShopGuard does not share user data with third parties for advertising or marketing.
+            However, ShopGuard uses Google Firebase services as a service provider to run app functionality.
+            These services may process data only to provide the required app features, such as:
+          </p>
+          <ul>
+            <li>Authentication (login/signup)</li>
+            <li>Cloud database sync</li>
+            <li>File storage (attachments)</li>
+            <li>Push notifications (FCM)</li>
+            <li>Analytics</li>
+          </ul>
+        </div>
 
-      <h2>10. Contact Us</h2>
-      <p>If you have questions or concerns about this Privacy Policy, please contact us:</p>
-      <p><b>Email:</b> shopguard.help@gmail.com</p>
+        <div class="section">
+          <h2>4) Permissions and Device Features We Use</h2>
 
-      <hr/>
+          <p><b>A) Microphone (Optional)</b></p>
+          <ul>
+            <li>Used for voice entry in Rozmel / Cheque / Notes</li>
+            <li>Audio is not stored by ShopGuard</li>
+          </ul>
 
-      <h1>ShopGuard – गोपनीयता नीति</h1>
-      <p class="muted">अंतिम अपडेट: 2026-02-13</p>
+          <p style="margin-top:10px;"><b>B) Camera / Photos (Optional)</b></p>
+          <ul>
+            <li>Used only when you choose to attach bills/photos/documents or capture a photo</li>
+          </ul>
 
-      <p><b>ShopGuard आपकी गोपनीयता का सम्मान करता है।</b> यह गोपनीयता नीति बताती है कि ShopGuard मोबाइल ऐप का उपयोग करते समय हम आपकी जानकारी कैसे एकत्र, उपयोग, संग्रह और सुरक्षित करते हैं।</p>
+          <p style="margin-top:10px;"><b>C) Notifications</b></p>
+          <ul>
+            <li>Used for cheque reminders and important updates</li>
+          </ul>
 
-      <h2>1. हम कौन-सी जानकारी लेते हैं</h2>
-      <p>हम निम्न जानकारी ले सकते हैं:</p>
-      <ul>
-        <li><b>खाता (Account) जानकारी:</b> ईमेल पता (Login और account management के लिए)।</li>
-        <li><b>उपयोगकर्ता द्वारा डाला गया Business डेटा:</b> Customer/Supplier की जानकारी (नाम, मोबाइल नंबर, फोटो, नोट्स), ledger entries, Rozmel diary entries, amount और transactions, loan/interest की जानकारी, cheque reminder की जानकारी।</li>
-        <li><b>Attachments (Optional):</b> Bills/Photos/Documents जो आप अपनी इच्छा से attach करते हैं।</li>
-        <li><b>Support / Technical जानकारी (Basic):</b> Bug report और support के लिए app version और device model का उपयोग हो सकता है।</li>
-      </ul>
+          <p style="margin-top:10px;"><b>D) Exact Alarm (Android 12+)</b></p>
+          <ul>
+            <li>Used to trigger cheque reminder notifications at the correct time</li>
+          </ul>
 
-      <h2>2. हम आपकी जानकारी का उपयोग कैसे करते हैं</h2>
-      <p>हम आपकी जानकारी का उपयोग केवल app की सुविधाएँ देने के लिए करते हैं जैसे Rozmel diary, customer/supplier ledger (उधार खाते), loan/interest tracking, cheque reminders, attachments, backup/restore, app updates और support। हम आपका डेटा <b>किसी को बेचते या किराये पर नहीं देते</b>।</p>
+          <p style="margin-top:10px;"><b>E) Storage / Media Access (Optional)</b></p>
+          <ul>
+            <li>Used only to let you pick images/documents for attachments</li>
+          </ul>
 
-      <h2>3. Permissions और Device Features का उपयोग</h2>
-      <p>ShopGuard निम्न device features केवल app के काम के लिए उपयोग कर सकता है:</p>
-      <ul>
-        <li><b>Microphone (Optional):</b> Rozmel / Cheque / Notes में voice entry के लिए।</li>
-        <li><b>Camera / Photos (Optional):</b> Bills/Photos/Documents attach करने के लिए।</li>
-        <li><b>Notifications:</b> Cheque reminders और important updates दिखाने के लिए।</li>
-        <li><b>Exact Alarm (Android 12+):</b> Cheque reminder को सही समय पर चलाने के लिए।</li>
-        <li><b>Contact Picker (बिना permission):</b> ShopGuard system contact picker से नंबर select करने की सुविधा दे सकता है। इसके लिए हम Contacts permission नहीं मांगते।</li>
-      </ul>
-      <p class="muted">जहाँ संभव हो, आप optional permissions दिए बिना भी basic app use कर सकते हैं।</p>
+          <p style="margin-top:10px;"><b>F) Contact Picker (No Contacts Permission)</b></p>
+          <ul>
+            <li>ShopGuard may allow selecting a phone number using the system contact picker.</li>
+            <li>We do not request Contacts permission.</li>
+          </ul>
 
-      <h2>4. Third-Party Services</h2>
-      <p>ShopGuard, Google के Firebase services का उपयोग करता है (Authentication, Firestore Database, Storage, Cloud Messaging)। ये services app चलाने के लिए आवश्यक data process कर सकते हैं।</p>
+          <p>You can use basic app features even without optional permissions where possible.</p>
+        </div>
 
-      <h2>5. डेटा सुरक्षा</h2>
-      <p>हम authentication और Firebase security rules जैसी सुरक्षा तकनीकें उपयोग करते हैं ताकि आपका डेटा unauthorized access से सुरक्षित रहे। फिर भी, कोई भी system 100% secure नहीं होता, इसलिए हम absolute security की guarantee नहीं दे सकते।</p>
+        <div class="section">
+          <h2>5) Firebase / Third-Party Services</h2>
+          <p>ShopGuard uses Google Firebase services, including:</p>
+          <ul>
+            <li>Firebase Authentication</li>
+            <li>Cloud Firestore</li>
+            <li>Firebase Storage</li>
+            <li>Firebase Cloud Messaging (FCM)</li>
+            <li>Firebase Analytics</li>
+            <li>Firebase Cloud Functions</li>
+          </ul>
+          <p>These services may process data as required for app functionality.</p>
+        </div>
 
-      <h2>6. डेटा कितने समय तक रखा जाता है</h2>
-      <p>जब तक आपका account active है और आप app use कर रहे हैं, तब तक आपका डेटा store रह सकता है।</p>
+        <div class="section">
+          <h2>6) Data Security</h2>
+          <ul>
+            <li>Authentication</li>
+            <li>Firebase security rules</li>
+            <li>Encrypted data transfer (HTTPS/TLS)</li>
+          </ul>
+          <p>However, no method of storage is 100% secure. We cannot guarantee absolute security.</p>
+        </div>
 
-      <h2>7. Account Deletion और Data Deletion</h2>
-      <p>यूज़र अपना account और data दो तरीकों से delete कर सकते हैं:</p>
-      <ul>
-        <li><b>App के अंदर से (Recommended):</b> Settings → Delete Account &amp; Data (यह action permanent है)।</li>
-        <li><b>Support Email से Request करके:</b> अगर आप app access नहीं कर पा रहे हैं, तो आप नीचे दिए email पर deletion request कर सकते हैं।</li>
-      </ul>
+        <div class="section">
+          <h2>7) Data Retention</h2>
+          <p>Your data is stored as long as:</p>
+          <ul>
+            <li>Your account is active, and</li>
+            <li>You continue using the app</li>
+          </ul>
+          <p>If you delete your account, your stored data will be deleted permanently (as described below).</p>
+        </div>
 
-      <h2>8. बच्चों की गोपनीयता</h2>
-      <p>ShopGuard 13 वर्ष से कम उम्र के बच्चों के लिए नहीं है। हम जानबूझकर बच्चों से personal data collect नहीं करते।</p>
+        <div class="section">
+          <h2>8) Account Deletion and Data Deletion</h2>
+          <p>Users can delete their account and associated data in two ways:</p>
+          <p><b>A) Inside the App (Recommended)</b><br/>Settings → Delete Account &amp; Data</p>
+          <p><b>B) By Contacting Support</b><br/>If you cannot access the app, you may request deletion by email: <b>shopguard.help@gmail.com</b></p>
+        </div>
 
-      <h2>9. Policy में बदलाव</h2>
-      <p>हम समय-समय पर इस policy को update कर सकते हैं। बदलाव इसी document में दिखेगा।</p>
+        <div class="section">
+          <h2>9) Children’s Privacy</h2>
+          <p>ShopGuard is not intended for children under the age of 13. We do not knowingly collect personal information from children.</p>
+        </div>
 
-      <h2>10. संपर्क करें</h2>
-      <p>यदि आपको इस policy से संबंधित कोई प्रश्न हो तो आप हमसे संपर्क कर सकते हैं:</p>
-      <p><b>Email:</b> shopguard.help@gmail.com</p>
+        <div class="section">
+          <h2>10) Changes to This Policy</h2>
+          <p>We may update this Privacy Policy from time to time. Any changes will be reflected in this document and/or within the app where applicable.</p>
+        </div>
+
+        <div class="section">
+          <h2>11) Contact Us</h2>
+          <p>If you have questions or concerns about this Privacy Policy, please contact us:</p>
+          <p>Email: <b>shopguard.help@gmail.com</b></p>
+        </div>
+
+        <div class="small">Tip: This page is intended for Play Store compliance and user transparency.</div>
+      </div>
+
+      <!-- ===================== HINDI ===================== -->
+      <div id="content-hi" role="tabpanel" aria-labelledby="tab-hi" style="display:none;">
+        <div class="section">
+          <p>
+            ShopGuard आपकी गोपनीयता का सम्मान करता है। यह गोपनीयता नीति बताती है कि ShopGuard मोबाइल ऐप का उपयोग करते समय
+            हम आपकी जानकारी कैसे एकत्र, उपयोग, संग्रह और सुरक्षित करते हैं।
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>1) हम कौन-सी जानकारी लेते हैं</h2>
+          <p>हम निम्न जानकारी ले सकते हैं:</p>
+
+          <p><b>A) अकाउंट जानकारी</b></p>
+          <ul>
+            <li>ईमेल पता (Login और account management के लिए)</li>
+            <li>(वैकल्पिक) नाम (यदि आप चाहें तो)</li>
+          </ul>
+
+          <p style="margin-top:10px;"><b>B) उपयोगकर्ता द्वारा डाला गया Business डेटा (मुख्य डेटा)</b></p>
+          <ul>
+            <li>Customer/Supplier की जानकारी (नाम, मोबाइल नंबर, नोट्स, वैकल्पिक फोटो)</li>
+            <li>लेजर एंट्री (जमा/खर्च), बैलेंस, पेमेंट हिस्ट्री</li>
+            <li>रोज़मेल डायरी एंट्री</li>
+            <li>लोन/ब्याज की जानकारी</li>
+            <li>चेक ट्रैकिंग और रिमाइंडर</li>
+            <li>आपके द्वारा दर्ज किया गया अन्य नोट्स/रिकॉर्ड</li>
+          </ul>
+
+          <p style="margin-top:10px;"><b>C) अटैचमेंट (Optional)</b></p>
+          <ul>
+            <li>Bills/Photos/Documents जो आप अपनी इच्छा से अपलोड करते हैं</li>
+          </ul>
+
+          <p style="margin-top:10px;"><b>D) App Activity / Analytics डेटा</b></p>
+          <ul>
+            <li>ऐप का बेसिक उपयोग डेटा (performance और improvement के लिए)</li>
+          </ul>
+
+          <p style="margin-top:10px;"><b>E) Device / Technical जानकारी</b></p>
+          <ul>
+            <li>Device model और Android version (basic diagnostics)</li>
+            <li>App version और basic diagnostic जानकारी (यदि लागू हो)</li>
+            <li>FCM token (notifications के लिए)</li>
+            <li>Device identifiers (जैसे Firebase installation identifiers) जो analytics, diagnostics और notifications के लिए उपयोग हो सकते हैं</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>2) हम आपकी जानकारी का उपयोग कैसे करते हैं</h2>
+          <p>हम आपकी जानकारी का उपयोग केवल ऐप की सुविधाएँ देने और सुधारने के लिए करते हैं, जैसे:</p>
+          <ul>
+            <li>रोज़मेल डायरी</li>
+            <li>ग्राहक/सप्लायर लेजर (उधार खाते)</li>
+            <li>लोन/ब्याज ट्रैकिंग</li>
+            <li>चेक रिमाइंडर</li>
+            <li>अटैचमेंट</li>
+            <li>बैकअप/रिस्टोर (यदि उपलब्ध हो)</li>
+            <li>नोटिफिकेशन और जरूरी अपडेट</li>
+            <li>टेक्निकल सपोर्ट और bug fixing</li>
+            <li>ऐप performance और improvement के लिए analytics</li>
+          </ul>
+          <p>हम आपका डेटा किसी को बेचते या किराये पर नहीं देते।</p>
+        </div>
+
+        <div class="section">
+          <h2>3) क्या ShopGuard आपका डेटा किसी तीसरे पक्ष को शेयर करता है?</h2>
+          <p><b>हाँ (केवल service providers के साथ)</b></p>
+          <p>
+            ShopGuard user data को advertising या marketing के लिए किसी तीसरे पक्ष के साथ शेयर नहीं करता।
+            हालांकि, ShopGuard ऐप की सुविधाएँ चलाने के लिए Google के Firebase services का उपयोग करता है।
+            ये सेवाएँ केवल app features चलाने के लिए data process कर सकती हैं, जैसे:
+          </p>
+          <ul>
+            <li>Login/Signup (Authentication)</li>
+            <li>Cloud database sync</li>
+            <li>File storage (attachments)</li>
+            <li>Push notifications (FCM)</li>
+            <li>Analytics</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>4) Permissions और Device Features का उपयोग</h2>
+
+          <p><b>A) Microphone (Optional)</b></p>
+          <ul>
+            <li>रोज़मेल / चेक / नोट्स में voice entry के लिए</li>
+            <li>ShopGuard audio को store नहीं करता</li>
+          </ul>
+
+          <p style="margin-top:10px;"><b>B) Camera / Photos (Optional)</b></p>
+          <ul>
+            <li>केवल bills/photos/documents attach करने के लिए या फोटो capture करने के लिए</li>
+          </ul>
+
+          <p style="margin-top:10px;"><b>C) Notifications</b></p>
+          <ul>
+            <li>चेक रिमाइंडर और जरूरी अपडेट दिखाने के लिए</li>
+          </ul>
+
+          <p style="margin-top:10px;"><b>D) Exact Alarm (Android 12+)</b></p>
+          <ul>
+            <li>चेक रिमाइंडर को सही समय पर चलाने के लिए</li>
+          </ul>
+
+          <p style="margin-top:10px;"><b>E) Storage / Media Access (Optional)</b></p>
+          <ul>
+            <li>केवल attachment के लिए images/documents चुनने के लिए</li>
+          </ul>
+
+          <p style="margin-top:10px;"><b>F) Contact Picker (बिना permission)</b></p>
+          <ul>
+            <li>ShopGuard system contact picker से नंबर select करने की सुविधा दे सकता है।</li>
+            <li>इसके लिए हम Contacts permission नहीं मांगते।</li>
+          </ul>
+
+          <p>जहाँ संभव हो, आप optional permissions दिए बिना भी basic app use कर सकते हैं।</p>
+        </div>
+
+        <div class="section">
+          <h2>5) Firebase / Third-Party Services</h2>
+          <p>ShopGuard Google के Firebase services का उपयोग करता है, जैसे:</p>
+          <ul>
+            <li>Firebase Authentication</li>
+            <li>Cloud Firestore</li>
+            <li>Firebase Storage</li>
+            <li>Firebase Cloud Messaging (FCM)</li>
+            <li>Firebase Analytics</li>
+            <li>Firebase Cloud Functions</li>
+          </ul>
+          <p>ये सेवाएँ ऐप चलाने के लिए आवश्यक data process कर सकती हैं।</p>
+        </div>
+
+        <div class="section">
+          <h2>6) डेटा सुरक्षा</h2>
+          <ul>
+            <li>Authentication</li>
+            <li>Firebase security rules</li>
+            <li>Encrypted data transfer (HTTPS/TLS)</li>
+          </ul>
+          <p>फिर भी, कोई भी system 100% secure नहीं होता। इसलिए हम absolute security की guarantee नहीं दे सकते।</p>
+        </div>
+
+        <div class="section">
+          <h2>7) डेटा कितने समय तक रखा जाता है</h2>
+          <p>जब तक:</p>
+          <ul>
+            <li>आपका account active है, और</li>
+            <li>आप app use कर रहे हैं,</li>
+          </ul>
+          <p>तब तक आपका डेटा store रह सकता है। अगर आप account delete करते हैं, तो आपका डेटा permanent delete कर दिया जाएगा।</p>
+        </div>
+
+        <div class="section">
+          <h2>8) Account Deletion और Data Deletion</h2>
+          <p>यूज़र अपना account और data दो तरीकों से delete कर सकते हैं:</p>
+          <p><b>A) App के अंदर से (Recommended)</b><br/>Settings → Delete Account &amp; Data</p>
+          <p><b>B) Support Email से Request करके</b><br/>अगर आप app access नहीं कर पा रहे हैं, तो आप नीचे दिए email पर deletion request कर सकते हैं: <b>shopguard.help@gmail.com</b></p>
+        </div>
+
+        <div class="section">
+          <h2>9) बच्चों की गोपनीयता</h2>
+          <p>ShopGuard 13 वर्ष से कम उम्र के बच्चों के लिए नहीं है। हम जानबूझकर बच्चों से personal data collect नहीं करते।</p>
+        </div>
+
+        <div class="section">
+          <h2>10) Policy में बदलाव</h2>
+          <p>हम समय-समय पर इस policy को update कर सकते हैं। बदलाव इसी document में और जहाँ लागू हो, app में दिखेगा।</p>
+        </div>
+
+        <div class="section">
+          <h2>11) संपर्क करें</h2>
+          <p>यदि आपको इस policy से संबंधित कोई प्रश्न हो तो आप हमसे संपर्क कर सकते हैं:</p>
+          <p>Email: <b>shopguard.help@gmail.com</b></p>
+        </div>
+
+        <div class="small">नोट: यह पेज Play Store compliance और user transparency के लिए है।</div>
+      </div>
+
+      <div class="hr"></div>
+      <div class="small">
+        © 2026 ShopGuard. | Support: <b>shopguard.help@gmail.com</b>
+      </div>
     </div>
   </div>
+
+  <script>
+    const tabEn = document.getElementById('tab-en');
+    const tabHi = document.getElementById('tab-hi');
+    const en = document.getElementById('content-en');
+    const hi = document.getElementById('content-hi');
+
+    function show(lang){
+      const isEn = lang === 'en';
+      en.style.display = isEn ? '' : 'none';
+      hi.style.display = isEn ? 'none' : '';
+      tabEn.setAttribute('aria-selected', isEn ? 'true' : 'false');
+      tabHi.setAttribute('aria-selected', isEn ? 'false' : 'true');
+      try { localStorage.setItem('shopguard_lang', lang); } catch(e) {}
+    }
+
+    tabEn.addEventListener('click', () => show('en'));
+    tabHi.addEventListener('click', () => show('hi'));
+
+    // Remember last selection
+    let saved = 'en';
+    try { saved = localStorage.getItem('shopguard_lang') || 'en'; } catch(e) {}
+    show(saved === 'hi' ? 'hi' : 'en');
+  </script>
 </body>
 </html>
