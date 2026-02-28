@@ -12,7 +12,7 @@
     *{box-sizing:border-box}
     body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
     .wrap{max-width:980px;margin:0 auto;padding:18px}
-    .card{background:rgba(15,23,42,.9);border:1px solid var(--line);border-radius:14px;padding:18px}
+    .card{background:rgba(15,23,42,.93);border:1px solid var(--line);border-radius:14px;padding:18px}
     h1{margin:0 0 6px;font-size:22px}
     .meta{color:var(--muted);font-size:13px;margin-bottom:14px}
     .tabs{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 14px}
@@ -23,12 +23,21 @@
     .tab[aria-selected="true"]{background:var(--btnOn);border-color:transparent}
     .section{padding:12px 0;border-top:1px solid var(--line)}
     .section:first-of-type{border-top:none}
-    h2{margin:0 0 8px;font-size:16sp}
+    h2{margin:0 0 8px;font-size:16px}
     ul{margin:8px 0 0 18px}
     .small{color:var(--muted);font-size:12px;margin-top:10px}
     .badge{display:inline-block;padding:2px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:12px;margin-left:8px}
     a{color:#93c5fd}
     .hr{height:1px;background:var(--line);margin:14px 0}
+    .noteBox{
+      border:1px solid var(--line);
+      background:rgba(17,24,39,.55);
+      border-radius:12px;
+      padding:12px;
+      margin-top:10px;
+      color:var(--muted);
+      font-size:13px;
+    }
   </style>
 </head>
 <body>
@@ -36,7 +45,7 @@
     <div class="card">
       <h1>ShopGuard – Privacy Policy <span class="badge">English + हिन्दी</span></h1>
       <div class="meta">
-        Last updated: <b>2026-02-18</b><br/>
+        Last updated: <b>2026-02-28</b><br/>
         Support Email: <b>shopguard.help@gmail.com</b>
       </div>
 
@@ -66,6 +75,7 @@
           <ul>
             <li>Email address (used for login and account management)</li>
             <li>(Optional) Name (only if you choose to enter it)</li>
+            <li>(Optional) City / Shop Name (only if you choose to enter it)</li>
           </ul>
 
           <p style="margin-top:10px;"><b>B) User-Entered Business Data (Main App Data)</b></p>
@@ -87,9 +97,9 @@
           <ul>
             <li>Basic app usage events (for performance and improvement)</li>
             <li>
-              We may calculate basic, non-personal statistics such as total active users (last 7/30 days),
+              We may calculate basic, aggregated statistics such as total active users (last 7/30 days),
               total customers count, and trial/expired user counts for monitoring and improving the app.
-              These statistics are shown only as SAFE counts (no individual user list is displayed).
+              These statistics are shown only as SAFE counts (no individual user list is displayed publicly).
             </li>
           </ul>
 
@@ -102,13 +112,10 @@
           </ul>
         </div>
 
-        <!-- ✅ NEW SECTION: PUBLIC SEARCH / OWNER LIST -->
         <div class="section">
           <h2>2) Customer Lists &amp; Search Features (Owner List vs Public Search)</h2>
 
-          <p>
-            ShopGuard includes two customer-related views:
-          </p>
+          <p>ShopGuard includes two customer-related views:</p>
 
           <p><b>A) “My Customers” (Owner List)</b></p>
           <ul>
@@ -121,19 +128,38 @@
             <li>This search works only when an exact 10-digit mobile number is entered.</li>
             <li>This feature is intended only for identification and record matching.</li>
             <li>
-              In public search mode, ShopGuard shows only limited information required for basic identification.
+              In public search mode, ShopGuard may show only limited information required for basic identification.
               Sensitive details (such as full photo, full profession, or reporter identity) may be hidden or masked.
             </li>
           </ul>
 
-          <p class="small">
+          <div class="noteBox">
             Important: ShopGuard does not verify whether user-entered customer information is true or accurate.
             Users are responsible for verifying any details before making business decisions.
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>3) Free Trial &amp; Subscription (Google Play Billing)</h2>
+
+          <p>
+            ShopGuard may provide a free trial (for example, 90 days). After the trial ends, some features may require a paid subscription.
+          </p>
+
+          <ul>
+            <li><b>No automatic billing:</b> We do not charge you automatically after trial. Payment happens only if you manually purchase a plan.</li>
+            <li>Subscriptions (monthly/yearly) are processed securely via <b>Google Play Billing</b>.</li>
+            <li>ShopGuard does <b>not</b> collect or store your card/UPI details.</li>
+            <li>Renewal/cancellation/refund policies are handled as per Google Play rules.</li>
+          </ul>
+
+          <p class="small">
+            Note: If you do not purchase after trial expiry, premium features may be restricted, but your data remains in your account unless you delete it.
           </p>
         </div>
 
         <div class="section">
-          <h2>3) How We Use Your Information</h2>
+          <h2>4) How We Use Your Information</h2>
           <p>We use your data only to provide and improve app features, such as:</p>
           <ul>
             <li>Rozmel diary</li>
@@ -150,12 +176,11 @@
         </div>
 
         <div class="section">
-          <h2>4) Does ShopGuard Share Data With Third Parties?</h2>
+          <h2>5) Does ShopGuard Share Data With Third Parties?</h2>
           <p><b>YES (Only with service providers)</b></p>
           <p>
             ShopGuard does not share user data with third parties for advertising or marketing.
             However, ShopGuard uses Google Firebase services as a service provider to run app functionality.
-            These services may process data only to provide the required app features, such as:
           </p>
           <ul>
             <li>Authentication (login/signup)</li>
@@ -167,7 +192,7 @@
         </div>
 
         <div class="section">
-          <h2>5) Permissions and Device Features We Use</h2>
+          <h2>6) Permissions and Device Features We Use</h2>
 
           <p><b>A) Microphone (Optional)</b></p>
           <ul>
@@ -200,28 +225,12 @@
             <li>ShopGuard may allow selecting a phone number using the system contact picker.</li>
             <li>We do not request Contacts permission.</li>
           </ul>
-
-          <p>You can use basic app features even without optional permissions where possible.</p>
-        </div>
-
-        <div class="section">
-          <h2>6) Firebase / Third-Party Services</h2>
-          <p>ShopGuard uses Google Firebase services, including:</p>
-          <ul>
-            <li>Firebase Authentication</li>
-            <li>Cloud Firestore</li>
-            <li>Firebase Storage</li>
-            <li>Firebase Cloud Messaging (FCM)</li>
-            <li>Firebase Analytics</li>
-            <li>Firebase Cloud Functions</li>
-          </ul>
-          <p>These services may process data as required for app functionality.</p>
         </div>
 
         <div class="section">
           <h2>7) Data Security</h2>
           <ul>
-            <li>Authentication</li>
+            <li>Firebase Authentication</li>
             <li>Firebase security rules</li>
             <li>Encrypted data transfer (HTTPS/TLS)</li>
           </ul>
@@ -251,12 +260,21 @@
         </div>
 
         <div class="section">
-          <h2>11) Changes to This Policy</h2>
+          <h2>11) Limitation of Liability</h2>
+          <p>
+            ShopGuard is a business record tool only. We do not guarantee outcomes of any business decision.
+            We are not responsible for losses, disputes, or issues caused due to incorrect data entered by users,
+            customer disputes, or interruptions in third-party services.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>12) Changes to This Policy</h2>
           <p>We may update this Privacy Policy from time to time. Any changes will be reflected in this document and/or within the app where applicable.</p>
         </div>
 
         <div class="section">
-          <h2>12) Contact Us</h2>
+          <h2>13) Contact Us</h2>
           <p>If you have questions or concerns about this Privacy Policy, please contact us:</p>
           <p>Email: <b>shopguard.help@gmail.com</b></p>
         </div>
@@ -273,7 +291,7 @@
           </p>
           <p class="small">
             ShopGuard दुकानदारों और छोटे व्यवसायों के लिए बनाया गया है ताकि वे लेजर, रोज़मेल, लोन और रिमाइंडर मैनेज कर सकें।
-            ShopGuard कोई सरकारी सेवा नहीं है, न ही यह कानूनी/वित्तीय सलाह देता है।
+            ShopGuard कोई क्रेडिट ब्यूरो नहीं है, न ही यह सरकारी सेवा है, और न ही यह कानूनी/वित्तीय सलाह देता है।
           </p>
         </div>
 
@@ -285,6 +303,7 @@
           <ul>
             <li>ईमेल पता (Login और account management के लिए)</li>
             <li>(वैकल्पिक) नाम (यदि आप चाहें तो)</li>
+            <li>(वैकल्पिक) शहर / दुकान का नाम (यदि आप चाहें तो)</li>
           </ul>
 
           <p style="margin-top:10px;"><b>B) उपयोगकर्ता द्वारा डाला गया Business डेटा (मुख्य डेटा)</b></p>
@@ -306,9 +325,9 @@
           <ul>
             <li>ऐप का बेसिक उपयोग डेटा (performance और improvement के लिए)</li>
             <li>
-              हम ऐप की मॉनिटरिंग और सुधार के लिए कुछ बेसिक, non-personal statistics निकाल सकते हैं,
+              हम ऐप की मॉनिटरिंग और सुधार के लिए कुछ aggregated statistics निकाल सकते हैं,
               जैसे: कुल Active Users (पिछले 7/30 दिन), कुल customers count, और trial/expired users count।
-              यह डेटा केवल SAFE counts के रूप में दिखाया जाता है (किसी भी individual user की list नहीं दिखाई जाती)।
+              यह केवल SAFE counts के रूप में उपयोग हो सकता है (public रूप से individual user list नहीं दिखाई जाती)।
             </li>
           </ul>
 
@@ -317,11 +336,10 @@
             <li>Device model और Android version (basic diagnostics)</li>
             <li>App version और basic diagnostic जानकारी (यदि लागू हो)</li>
             <li>FCM token (notifications के लिए)</li>
-            <li>Device identifiers (जैसे Firebase installation identifiers) जो analytics, diagnostics और notifications के लिए उपयोग हो सकते हैं</li>
+            <li>Device identifiers (जैसे Firebase installation identifiers) जो analytics/diagnostics/notifications के लिए उपयोग हो सकते हैं</li>
           </ul>
         </div>
 
-        <!-- ✅ NEW SECTION: PUBLIC SEARCH / OWNER LIST -->
         <div class="section">
           <h2>2) “My Customers” और “Search Customer (10-digit)” फीचर</h2>
 
@@ -343,18 +361,38 @@
             </li>
           </ul>
 
-          <p class="small">
+          <div class="noteBox">
             महत्वपूर्ण: ShopGuard user द्वारा डाली गई customer जानकारी की सत्यता verify नहीं करता।
             कोई भी business decision लेने से पहले जानकारी की जांच करना user की जिम्मेदारी है।
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>3) Free Trial और Subscription (Google Play Billing)</h2>
+
+          <p>
+            ShopGuard में free trial (उदाहरण: 90 दिन) दिया जा सकता है। Trial के बाद कुछ features के लिए paid subscription की आवश्यकता हो सकती है।
+          </p>
+
+          <ul>
+            <li><b>कोई automatic billing नहीं:</b> Trial के बाद हम अपने-आप पैसे नहीं काटते। Payment केवल तभी होगा जब आप खुद plan खरीदेंगे।</li>
+            <li>Subscription (monthly/yearly) <b>Google Play Billing</b> के द्वारा securely process होता है।</li>
+            <li>ShopGuard आपके card/UPI details collect या store नहीं करता।</li>
+            <li>Renewal/cancellation/refund Google Play की policies के अनुसार होगा।</li>
+          </ul>
+
+          <p class="small">
+            Note: यदि आप trial खत्म होने के बाद plan नहीं खरीदते, तो premium features restrict हो सकते हैं,
+            लेकिन आपका data account में रहेगा जब तक आप उसे delete नहीं करते।
           </p>
         </div>
 
         <div class="section">
-          <h2>3) हम आपकी जानकारी का उपयोग कैसे करते हैं</h2>
+          <h2>4) हम आपकी जानकारी का उपयोग कैसे करते हैं</h2>
           <p>हम आपकी जानकारी का उपयोग केवल ऐप की सुविधाएँ देने और सुधारने के लिए करते हैं, जैसे:</p>
           <ul>
             <li>रोज़मेल डायरी</li>
-            <li>ग्राहक/सप्लायर लेजर (उधार खाते)</li>
+            <li>ग्राहक/सप्लायर लेजर</li>
             <li>लोन/ब्याज ट्रैकिंग</li>
             <li>चेक रिमाइंडर</li>
             <li>अटैचमेंट</li>
@@ -367,12 +405,11 @@
         </div>
 
         <div class="section">
-          <h2>4) क्या ShopGuard आपका डेटा किसी तीसरे पक्ष को शेयर करता है?</h2>
+          <h2>5) क्या ShopGuard आपका डेटा किसी तीसरे पक्ष को शेयर करता है?</h2>
           <p><b>हाँ (केवल service providers के साथ)</b></p>
           <p>
             ShopGuard user data को advertising या marketing के लिए किसी तीसरे पक्ष के साथ शेयर नहीं करता।
-            हालांकि, ShopGuard ऐप की सुविधाएँ चलाने के लिए Google के Firebase services का उपयोग करता है।
-            ये सेवाएँ केवल app features चलाने के लिए data process कर सकती हैं, जैसे:
+            हालांकि, ShopGuard app features चलाने के लिए Google Firebase services का उपयोग करता है।
           </p>
           <ul>
             <li>Login/Signup (Authentication)</li>
@@ -384,7 +421,7 @@
         </div>
 
         <div class="section">
-          <h2>5) Permissions और Device Features का उपयोग</h2>
+          <h2>6) Permissions और Device Features का उपयोग</h2>
 
           <p><b>A) Microphone (Optional)</b></p>
           <ul>
@@ -417,28 +454,12 @@
             <li>ShopGuard system contact picker से नंबर select करने की सुविधा दे सकता है।</li>
             <li>इसके लिए हम Contacts permission नहीं मांगते।</li>
           </ul>
-
-          <p>जहाँ संभव हो, आप optional permissions दिए बिना भी basic app use कर सकते हैं।</p>
-        </div>
-
-        <div class="section">
-          <h2>6) Firebase / Third-Party Services</h2>
-          <p>ShopGuard Google के Firebase services का उपयोग करता है, जैसे:</p>
-          <ul>
-            <li>Firebase Authentication</li>
-            <li>Cloud Firestore</li>
-            <li>Firebase Storage</li>
-            <li>Firebase Cloud Messaging (FCM)</li>
-            <li>Firebase Analytics</li>
-            <li>Firebase Cloud Functions</li>
-          </ul>
-          <p>ये सेवाएँ ऐप चलाने के लिए आवश्यक data process कर सकती हैं।</p>
         </div>
 
         <div class="section">
           <h2>7) डेटा सुरक्षा</h2>
           <ul>
-            <li>Authentication</li>
+            <li>Firebase Authentication</li>
             <li>Firebase security rules</li>
             <li>Encrypted data transfer (HTTPS/TLS)</li>
           </ul>
@@ -450,7 +471,7 @@
           <p>जब तक:</p>
           <ul>
             <li>आपका account active है, और</li>
-            <li>आप app use कर रहे हैं,</li>
+            <li>आप app use कर रहे हैं</li>
           </ul>
           <p>तब तक आपका डेटा store रह सकता है। अगर आप account delete करते हैं, तो आपका डेटा permanent delete कर दिया जाएगा।</p>
         </div>
@@ -468,13 +489,21 @@
         </div>
 
         <div class="section">
-          <h2>11) Policy में बदलाव</h2>
+          <h2>11) Liability / जिम्मेदारी सीमा</h2>
+          <p>
+            ShopGuard एक business record tool है। यह किसी भी business decision का परिणाम guarantee नहीं करता।
+            User द्वारा डाले गए गलत data, customer disputes, या third-party service interruptions के कारण होने वाले नुकसान के लिए
+            ShopGuard जिम्मेदार नहीं होगा।
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>12) Policy में बदलाव</h2>
           <p>हम समय-समय पर इस policy को update कर सकते हैं। बदलाव इसी document में और जहाँ लागू हो, app में दिखेगा।</p>
         </div>
 
         <div class="section">
-          <h2>12) संपर्क करें</h2>
-          <p>यदि आपको इस policy से संबंधित कोई प्रश्न हो तो आप हमसे संपर्क कर सकते हैं:</p>
+          <h2>13) संपर्क करें</h2>
           <p>Email: <b>shopguard.help@gmail.com</b></p>
         </div>
 
